@@ -1,0 +1,51 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #1c2430; background: #f6f8fa; line-height: 1.6; }
+
+.hero {
+  min-height: 80vh; display: flex; flex-direction: column; color: #fff;
+  background: linear-gradient(rgba(10,25,40,.45), rgba(10,25,40,.65)),
+              linear-gradient(135deg, #2b6777 0%, #52ab98 45%, #5b4b8a 100%);
+  background-size: cover; background-position: center;
+}
+.hero nav { display: flex; justify-content: flex-end; gap: 1.5rem; padding: 1.5rem 2rem; }
+.hero nav a { color: #fff; text-decoration: none; font-weight: 600; }
+.hero-text { margin: auto; text-align: center; padding: 2rem; }
+.hero h1 { font-size: clamp(2.5rem, 8vw, 5rem); letter-spacing: -1px; }
+.hero p { font-size: 1.25rem; margin: 1rem 0 2rem; opacity: .9; }
+.btn { background: #fff; color: #1c2430; padding: .8rem 1.8rem; border-radius: 999px; text-decoration: none; font-weight: 700; }
+
+section { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
+h2 { font-size: 2rem; margin-bottom: 1rem; text-align: center; }
+#about p { max-width: 650px; margin: 0 auto; text-align: center; }
+
+.filters { display: flex; justify-content: center; gap: .6rem; margin-bottom: 2rem; }
+.filters button { border: 2px solid #2b6777; background: transparent; color: #2b6777; padding: .45rem 1.2rem; border-radius: 999px; cursor: pointer; font-weight: 600; }
+.filters button.active, .filters button:hover { background: #2b6777; color: #fff; }
+
+.grid { columns: 3 280px; column-gap: 1rem; }
+.item { break-inside: avoid; margin-bottom: 1rem; position: relative; overflow: hidden; border-radius: 10px; cursor: pointer; background: #dde3e8; }
+.item img { width: 100%; display: block; transition: transform .4s; }
+.item:hover img { transform: scale(1.05); }
+.item span { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.5rem .8rem .6rem; color: #fff; font-size: .9rem; background: linear-gradient(transparent, rgba(0,0,0,.7)); opacity: 0; transition: opacity .3s; }
+.item:hover span { opacity: 1; }
+.item.hide { display: none; }
+
+footer { text-align: center; padding: 2rem; color: #667; }
+
+.lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.92); display: flex; align-items: center; justify-content: center; z-index: 10; }
+.lightbox[hidden] { display: none; }
+.lightbox figure { max-width: 90vw; max-height: 90vh; text-align: center; color: #fff; }
+.lightbox img { max-width: 90vw; max-height: 80vh; border-radius: 6px; }
+.lightbox figcaption { margin-top: .6rem; }
+.lightbox button { position: absolute; background: none; border: 0; color: #fff; font-size: 2.5rem; cursor: pointer; padding: 1rem; }
+.close { top: 0; right: 1rem; }
+.prev { left: .5rem; } .next { right: .5rem; }
+
+.dropzone { border: 2px dashed #2b6777; border-radius: 12px; padding: 1.5rem; text-align: center; margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; align-items: center; background: #fff; }
+.dropzone.over { background: #e3f3f0; }
+.dropzone select { padding: .5rem; border-radius: 6px; border: 1px solid #aab; font-size: 1rem; }
+.btn.dark { background: #2b6777; color: #fff; cursor: pointer; }
+#status { text-align: center; color: #556; margin-bottom: 1rem; }
+.item .del { position: absolute; top: .4rem; right: .4rem; width: 28px; height: 28px; border: 0; border-radius: 50%; background: rgba(0,0,0,.6); color: #fff; font-size: 1.1rem; cursor: pointer; opacity: 0; transition: opacity .3s; }
+.item:hover .del { opacity: 1; }

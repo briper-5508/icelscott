@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iceland &amp; Scotland – Our Trip</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <a href="#about">The Trip</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
+    <div class="hero-text">
+      <h1>Iceland &amp; Scotland</h1>
+      <p>Waterfalls, highlands, glaciers and lochs – our adventure in photos.</p>
+      <a class="btn" href="#gallery">View Photos</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>The Trip</h2>
+      <p>Edit this paragraph to tell the story of your journey: when you went, where you stayed, and your favourite moments.</p>
+    </section>
+
+    <section id="gallery">
+      <h2>Photo Gallery</h2>
+      <div class="dropzone" id="dropzone">
+        <p>Drag &amp; drop photos here, or</p>
+        <select id="country">
+          <option value="iceland">Iceland</option>
+          <option value="scotland">Scotland</option>
+        </select>
+        <label class="btn dark">Choose photos
+          <input type="file" id="file-input" accept="image/*" multiple hidden>
+        </label>
+      </div>
+      <p id="status"></p>
+      <div class="filters">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="iceland">Iceland</button>
+        <button data-filter="scotland">Scotland</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+  </main>
+
+  <footer><p>Made with ♥ after an unforgettable trip</p></footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="close" aria-label="Close">&times;</button>
+    <button class="nav prev" aria-label="Previous">&#10094;</button>
+    <figure>
+      <img id="lb-img" alt="">
+      <figcaption id="lb-cap"></figcaption>
+    </figure>
+    <button class="nav next" aria-label="Next">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
